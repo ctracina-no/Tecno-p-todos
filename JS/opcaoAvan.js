@@ -12,11 +12,6 @@ function fecharOpcoes() {
     painelOpcoes.setAttribute("aria-hidden", "true");
 }
 
-function movimentarBolinha(bolinha) {
-    bolinha.classList.toggle("translate-x-0")
-    bolinha.classList.toggle("translate-x-5")
-}
-
 // Aba de personalização
 const botaoOpcoes = document.getElementById("opcoes");
 const painelOpcoes = document.getElementById("painelOpcoes");
@@ -50,6 +45,12 @@ alterarTema.addEventListener("click", function () {
 window.aplicarTema = aplicarTema;
 
 // movimento da bolinha na alteração do tema
+
+function movimentarBolinha(bolinha) {
+    bolinha.classList.toggle("translate-x-0")
+    bolinha.classList.toggle("translate-x-5")
+}
+
 const bolinha = document.querySelector("#alterarTema span");
 
 const temaEscuro = document.documentElement.classList.contains("dark");
