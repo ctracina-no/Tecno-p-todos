@@ -8,3 +8,17 @@
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+.roda-cores {
+    background:
+        radial-gradient(circle, white 0%, transparent 75%),
+        conic-gradient(
+            red,
+            yellow,
+            lime,
+            cyan,
+            blue,
+            magenta,
+            red
+        );
+}

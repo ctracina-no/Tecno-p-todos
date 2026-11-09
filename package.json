@@ -1,13 +1,13 @@
 {
   "dependencies": {
-    "@tailwindcss/cli": "^4.3.3"
+    "@tailwindcss/cli": "^4.3.5"
   },
   "name": "tecno-p-todos",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "devDependencies": {
-    "tailwindcss": "^4.3.3"
+    "tailwindcss": "^4.3.5"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
