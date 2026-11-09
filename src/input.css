@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-    --color-tpt-azul: #00b6e7;
-    --color-tpt-azulclaro: #8CD1FF;
-    --color-tpt-meioazul: #0084A8;
-    --color-tpt-azulescuro: #005C99;
+/* A cor padrão do site é um azul */
+    --color-tpt-cor: #00b6e7;
+    --color-tpt-claro: #59DBFF;
+    --color-tpt-meio: #0084A8;
+    --color-tpt-escuro: #005C99;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));

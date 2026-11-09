@@ -4,13 +4,19 @@ function aplicarTema(tema) {
 
     document.documentElement.classList.toggle("dark", escuro);
 
+    // Atualiza a posição da bolinha
+    const bolinha = document.querySelector("#alterarTema span");
+
+    if (bolinha) {
+        bolinha.classList.toggle("translate-x-5", escuro);
+        bolinha.classList.toggle("translate-x-0", !escuro);
+    }
+
     icone.src = escuro ? "Img/moon.png" : "Img/sun.png";
     icone.alt = escuro ? "Modo escuro" : "Modo claro";
 
     botao.setAttribute("aria-pressed", String(escuro));
-    botao.setAttribute(
-        "aria-label",
-        escuro ? "Ativar modo claro" : "Ativar modo escuro"
+    botao.setAttribute("aria-label", escuro ? "Ativar modo claro" : "Ativar modo escuro"
     );
 }
 
@@ -19,7 +25,6 @@ const icone = botao.querySelector("img");
 
 // Recupera a preferência salva pelo usuário
 const temaSalvo = localStorage.getItem("tema") || "claro";
-
 
 // Aplica o tema assim que o JavaScript é executado
 aplicarTema(temaSalvo);

@@ -27,22 +27,6 @@ botaoFechar.addEventListener("click", fecharOpcoes);
 fundoOpcoes.addEventListener("click", fecharOpcoes);
 
 
-// Movimento da bolinha do botão de tema
-function movimentarBolinha(bolinha) {
-
-    const temaEscuro = document.documentElement.classList.contains("dark");
-
-    if (temaEscuro) {
-        bolinha.classList.remove("translate-x-0");
-        bolinha.classList.add("translate-x-5");
-
-    } else {
-        bolinha.classList.remove("translate-x-5");
-        bolinha.classList.add("translate-x-0");
-    }
-}
-
-
 // Botão de alteração de tema
 const alterarTema = document.getElementById("alterarTema");
 
@@ -55,11 +39,6 @@ alterarTema.addEventListener("click", function () {
     localStorage.setItem("tema", novoTema);
 
     aplicarTema(novoTema);
-
-    const bolinha = document.querySelector("#alterarTema span");
-
-    movimentarBolinha(bolinha);
-
 });
 
 // Roda de cores
@@ -69,6 +48,24 @@ const rodaCores = document.getElementById("rodaCores");
 
 //seleciona o texto que mostra a cor
 const valorCor = document.getElementById("valorCor");
+
+//Manter a cor escolhida pelo usuario
+function aplicarPaleta(tonalidade) {
+
+    const cor = `hsl(${tonalidade}, 75%, 45%)`;
+    const corClara = `hsl(${tonalidade}, 50%, 87%)`;
+    const corMedia = `hsl(${tonalidade}, 70%, 36%)`;
+    const corEscura = `hsl(${tonalidade}, 70%, 24%)`;
+
+    const raiz = document.documentElement;
+
+    raiz.style.setProperty("--color-tpt-cor", cor);
+    raiz.style.setProperty("--color-tpt-claro", corClara);
+    raiz.style.setProperty("--color-tpt-meio", corMedia);
+    raiz.style.setProperty("--color-tpt-escuro", corEscura);
+
+    valorCor.textContent = `Cor selecionada: ${cor}`;
+}
 
 //seleciona a cor em si
 rodaCores.addEventListener("click", function(event) {
@@ -89,19 +86,24 @@ const anguloNormalizado = (graus + 360) % 360;
 
 const tonalidade = (anguloNormalizado + 90) % 360;
 
-const cor = `hsl(${tonalidade}, 100%, 50%)`;
-const corClara = `hsl(${tonalidade}, 100%, 75%)`;
-const corMedia = `hsl(${tonalidade}, 100%, 35%)`;
-const corEscura = `hsl(${tonalidade}, 100%, 25%)`;
+aplicarPaleta(tonalidade);
+
+localStorage.setItem("tonalidade", tonalidade);
 
 valorCor.textContent = `Cor selecionada: ${cor}`;
 
-document.documentElement.style.setProperty("--color-tpt-azul", cor);
+document.documentElement.style.setProperty("--color-tpt-cor", cor);
 
-document.documentElement.style.setProperty("--color-tpt-azulclaro", corClara);
+document.documentElement.style.setProperty("--color-tpt-claro", corClara);
 
-document.documentElement.style.setProperty("--color-tpt-meioazul", corMedia);
+document.documentElement.style.setProperty("--color-tpt-meio", corMedia);
 
-document.documentElement.style.setProperty("--color-tpt-azulescuro", corEscura);
+document.documentElement.style.setProperty("--color-tpt-escuro", corEscura);
+});
 
-})
+//Salva o tema
+const tonalidadeSalva = localStorage.getItem("tonalidade");
+
+if (tonalidadeSalva !== null) {
+    aplicarPaleta(Number(tonalidadeSalva));
+}
