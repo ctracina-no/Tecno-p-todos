@@ -82,15 +82,16 @@ botaoResetar.addEventListener("click", function () {
     tamanhoTexto.value = 100;
     valorTamanhoTexto.textContent = "100%";
     conteudoPrincipal.style.removeProperty("--escala-texto");
+    localStorage.removeItem("tamanhoTexto");
 
     // espaçamento das linhas padrão = 1.5
     espacamentoLinhas.value = 1.5;
     valorEspacamentoLinhas.textContent = "1,5";
     conteudoPrincipal.style.lineHeight = "1.5";
+    localStorage.removeItem("espacamentoLinhas");
 
     // Desativar alto contraste
     document.documentElement.classList.remove("alto-contraste");
-
     localStorage.removeItem("altoContraste");
 
     alternarContraste.setAttribute("aria-pressed", "false");
@@ -113,7 +114,7 @@ const valorCor = document.getElementById("valorCor");
 //Manter a cor escolhida pelo usuario
 function aplicarPaleta(tonalidade) {
 
-    const cor = `hsl(${tonalidade}, 75%, 45%)`;
+    const cor = `hsl(${tonalidade.toFixed(2)}, 75%, 45%)`;
     const corClara = `hsl(${tonalidade}, 50%, 87%)`;
     const corMedia = `hsl(${tonalidade}, 70%, 36%)`;
     const corEscura = `hsl(${tonalidade}, 70%, 24%)`;
@@ -166,7 +167,9 @@ tamanhoTexto.addEventListener("input", function () {
 
     const escala = Number(tamanhoTexto.value) / 100;
 
-    conteudoPrincipal.style.setProperty("--escala-texto", escala)
+    conteudoPrincipal.style.setProperty("--escala-texto", escala);
+
+    localStorage.setItem("tamanhoTexto", tamanhoTexto.value);
 });
 
 // Espaçamento das linhas
@@ -177,7 +180,34 @@ espacamentoLinhas.addEventListener("input", function () {
     conteudoPrincipal.style.lineHeight = valor;
 
     valorEspacamentoLinhas.textContent = valor.toFixed(1).replace(".", ".");
+
+    localStorage.setItem("espacamentoLinhas", espacamentoLinhas.value)
 });
+
+// Recuperar o tamanho do texto salvo
+const tamanhoTextoSalvo = localStorage.getItem("tamanhoTexto");
+
+if (tamanhoTextoSalvo !== null) {
+    const valor = Number(tamanhoTextoSalvo);
+
+    tamanhoTexto.value = valor;
+    valorTamanhoTexto.textContent = `${valor}%`;
+
+    const escala = valor / 100;
+    conteudoPrincipal.style.setProperty("--escala-texto", escala);
+}
+
+// Recuperar o espaçamento das linhas salvo
+const espacamentoLinhasSalvo = localStorage.getItem("espacamentoLinhas");
+
+if (espacamentoLinhasSalvo !== null) {
+    const valor = Number(espacamentoLinhasSalvo);
+
+    espacamentoLinhas.value = valor;
+    conteudoPrincipal.style.lineHeight = valor;
+
+    valorEspacamentoLinhas.textContent = valor.toFixed(1).replace(".", ",");
+}
 
 alternarContraste.addEventListener("click", function () {
 
