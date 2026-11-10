@@ -19,6 +19,9 @@ const conteudoPrincipal = document.getElementById("inicio")
 const espacamentoLinhas = document.getElementById("espacamentoLinhas")
 const valorEspacamentoLinhas = document.getElementById("valorEspacamentoLinhas")
 
+//const para constraste
+const alternarContraste = document.getElementById("alternarContraste");
+
 
 
 // Abrir opções
@@ -64,6 +67,9 @@ botaoResetar.addEventListener("click", function () {
     localStorage.setItem("tema", "claro")
     aplicarTema("claro");
 
+    // Remove a cor personalizada salva
+    localStorage.removeItem("tonalidade");
+
     // cores padrão = azul
     document.documentElement.style.removeProperty("--color-tpt-cor");
     document.documentElement.style.removeProperty("--color-tpt-claro");
@@ -81,6 +87,19 @@ botaoResetar.addEventListener("click", function () {
     espacamentoLinhas.value = 1.5;
     valorEspacamentoLinhas.textContent = "1,5";
     conteudoPrincipal.style.lineHeight = "1.5";
+
+    // Desativar alto contraste
+    document.documentElement.classList.remove("alto-contraste");
+
+    localStorage.removeItem("altoContraste");
+
+    alternarContraste.setAttribute("aria-pressed", "false");
+    alternarContraste.setAttribute("aria-label", "Ativar alto contraste");
+
+    const bolinhaContraste = alternarContraste.querySelector("span");
+
+    bolinhaContraste.classList.remove("translate-x-5");
+    bolinhaContraste.classList.add("translate-x-0");
 });
 
 // Roda de cores
@@ -159,3 +178,50 @@ espacamentoLinhas.addEventListener("input", function () {
 
     valorEspacamentoLinhas.textContent = valor.toFixed(1).replace(".", ".");
 });
+
+alternarContraste.addEventListener("click", function () {
+
+    const ativo = document.documentElement.classList.toggle("alto-contraste");
+
+    localStorage.setItem("altoContraste", ativo ? "ativo" : "inativo");
+
+    alternarContraste.setAttribute("aria-pressed", String(ativo));
+
+    alternarContraste.setAttribute(
+        "aria-label",
+        ativo ? "Desativar alto contraste" : "Ativar alto contraste"
+    );
+
+    const bolinha = alternarContraste.querySelector("span");
+
+    bolinha.classList.toggle("translate-x-5", ativo);
+    bolinha.classList.toggle("translate-x-0", !ativo);
+
+});
+
+// Recuperar a preferência salva
+const contrasteSalvo = localStorage.getItem("altoContraste");
+
+const contrasteAtivo = contrasteSalvo === "ativo";
+
+// Aplicar o estado salvo
+document.documentElement.classList.toggle(
+    "alto-contraste",
+    contrasteAtivo
+);
+
+// Atualizar o interruptor
+alternarContraste.setAttribute(
+    "aria-pressed",
+    String(contrasteAtivo)
+);
+
+alternarContraste.setAttribute(
+    "aria-label",
+    contrasteAtivo ? "Desativar alto contraste" : "Ativar alto contraste"
+);
+
+const bolinhaContraste = alternarContraste.querySelector("span");
+
+bolinhaContraste.classList.toggle("translate-x-5", contrasteAtivo);
+bolinhaContraste.classList.toggle("translate-x-0", !contrasteAtivo);

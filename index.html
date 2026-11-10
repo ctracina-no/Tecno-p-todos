@@ -105,6 +105,7 @@
                     Cor Principal
                 </h3>
 
+                <!-- Roda de Cores -->
                 <button id="rodaCores" type="button"
                     class="roda-cores w-40 h-40 rounded-full cursor-crosshair border-4 border-gray-300 p-0"
                     aria-label="Escolher cor principal">
@@ -164,12 +165,36 @@
 
             </div>
 
-            <button id="resetarPersonalizacao" type="button"
-                class="mt-5 w-full rounded-lg border border-gray-300 px-4 py-2 font-medium hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
-                Restaurar configurações padrão
-            </button>
+            <div class="mt-6">
 
-        </div>
+                <h3 class="font-semibold text-lg mb-3">
+                    Acessibilidade
+                </h3>
+
+                <div class="flex items-center justify-between gap-4 py-3">
+
+                    <div>
+                        <h4 class="font-medium">Alto contraste</h4>
+
+                        <p class="text-sm text-gray-500 dark:text-gray-300">
+                            Aumentar o contraste das cores para leitura.
+                        </p>
+                    </div>
+
+                    <button id="alternarContraste" type="button" aria-label="Ativar alto contraste" aria-pressed="false"
+                    class="rounded-full border-2 border-gray-400 dark:border-gray-100 w-11 h-7 dark:bg-tpt-meio bg-gray-300">
+                    <span
+                        class="block w-5 h-5 rounded-full bg-white transition-transform duration-300 translate-x-0"></span>
+                </button>
+
+                </div>
+
+                <button id="resetarPersonalizacao" type="button"
+                    class="mt-5 w-full rounded-lg border border-gray-300 px-4 py-2 font-medium hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
+                    Restaurar configurações padrão
+                </button>
+
+            </div>
 
     </aside>
 
