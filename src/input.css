@@ -23,3 +23,7 @@
             red
         );
 }
+
+#inicio {
+    font-size: calc(1rem * var(--escala-texto, 1));
+}

@@ -1,9 +1,25 @@
 // Aba de personalização
 
+// consts do painel de personalização
 const botaoOpcoes = document.getElementById("opcoes");
 const painelOpcoes = document.getElementById("painelOpcoes");
 const fundoOpcoes = document.getElementById("fundoOpcoes");
 const botaoFechar = document.getElementById("fecharOpcoes");
+
+// const do botao de reset da página
+const botaoResetar = document.getElementById("resetarPersonalizacao");
+
+// consts do tamanho do texto
+const tamanhoTexto = document.getElementById("tamanhoTexto");
+const valorTamanhoTexto = document.getElementById("valorTamanhoTexto");
+
+const conteudoPrincipal = document.getElementById("inicio")
+
+// consts do espaçamento das linhas
+const espacamentoLinhas = document.getElementById("espacamentoLinhas")
+const valorEspacamentoLinhas = document.getElementById("valorEspacamentoLinhas")
+
+
 
 // Abrir opções
 function abrirOpcoes() {
@@ -41,6 +57,32 @@ alterarTema.addEventListener("click", function () {
     aplicarTema(novoTema);
 });
 
+// Botão resetar personalização 
+botaoResetar.addEventListener("click", function () {
+
+    // tema padrão = claro
+    localStorage.setItem("tema", "claro")
+    aplicarTema("claro");
+
+    // cores padrão = azul
+    document.documentElement.style.removeProperty("--color-tpt-cor");
+    document.documentElement.style.removeProperty("--color-tpt-claro");
+    document.documentElement.style.removeProperty("--color-tpt-meio");
+    document.documentElement.style.removeProperty("--color-tpt-escuro");
+
+    valorCor.textContent = "Cor Selecionada: Nenhuma";
+
+    // tamanho do texto padrão = 100%
+    tamanhoTexto.value = 100;
+    valorTamanhoTexto.textContent = "100%";
+    conteudoPrincipal.style.removeProperty("--escala-texto");
+
+    // espaçamento das linhas padrão = 1.5
+    espacamentoLinhas.value = 1.5;
+    valorEspacamentoLinhas.textContent = "1,5";
+    conteudoPrincipal.style.lineHeight = "1.5";
+});
+
 // Roda de cores
 
 //seleciona a cor da roda
@@ -68,37 +110,28 @@ function aplicarPaleta(tonalidade) {
 }
 
 //seleciona a cor em si
-rodaCores.addEventListener("click", function(event) {
+rodaCores.addEventListener("click", function (event) {
 
-const area = rodaCores.getBoundingClientRect();
+    const area = rodaCores.getBoundingClientRect();
 
-const centroX = area.left + area.width / 2;
-const centroY = area.top + area.height / 2;
+    const centroX = area.left + area.width / 2;
+    const centroY = area.top + area.height / 2;
 
-const diferencaX = event.clientX - centroX;
-const diferencaY = event.clientY - centroY;
+    const diferencaX = event.clientX - centroX;
+    const diferencaY = event.clientY - centroY;
 
-const angulo = Math.atan2(diferencaY, diferencaX);
+    const angulo = Math.atan2(diferencaY, diferencaX);
 
-const graus = angulo * (180 / Math.PI);
+    const graus = angulo * (180 / Math.PI);
 
-const anguloNormalizado = (graus + 360) % 360;
+    const anguloNormalizado = (graus + 360) % 360;
 
-const tonalidade = (anguloNormalizado + 90) % 360;
+    const tonalidade = (anguloNormalizado + 90) % 360;
 
-aplicarPaleta(tonalidade);
+    aplicarPaleta(tonalidade);
 
-localStorage.setItem("tonalidade", tonalidade);
+    localStorage.setItem("tonalidade", tonalidade);
 
-valorCor.textContent = `Cor selecionada: ${cor}`;
-
-document.documentElement.style.setProperty("--color-tpt-cor", cor);
-
-document.documentElement.style.setProperty("--color-tpt-claro", corClara);
-
-document.documentElement.style.setProperty("--color-tpt-meio", corMedia);
-
-document.documentElement.style.setProperty("--color-tpt-escuro", corEscura);
 });
 
 //Salva o tema
@@ -107,3 +140,22 @@ const tonalidadeSalva = localStorage.getItem("tonalidade");
 if (tonalidadeSalva !== null) {
     aplicarPaleta(Number(tonalidadeSalva));
 }
+
+// Tamanho de texto
+tamanhoTexto.addEventListener("input", function () {
+    valorTamanhoTexto.textContent = `${tamanhoTexto.value}%`;
+
+    const escala = Number(tamanhoTexto.value) / 100;
+
+    conteudoPrincipal.style.setProperty("--escala-texto", escala)
+});
+
+// Espaçamento das linhas
+espacamentoLinhas.addEventListener("input", function () {
+
+    const valor = Number(espacamentoLinhas.value);
+
+    conteudoPrincipal.style.lineHeight = valor;
+
+    valorEspacamentoLinhas.textContent = valor.toFixed(1).replace(".", ".");
+});

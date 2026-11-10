@@ -15,7 +15,7 @@
 <body class="bg-gray-100 text-gray-900  dark:bg-gray-900 dark:text-gray-100">
 
     <!-- Divisão do gradiente do modo claro e escuro -->
-    <header class="bg-linear-to-r from-[#ffffff] from-21% via-tpt-claro via-78% to-tpt-cor to-100% border-b border-tpt-cor
+    <header class="bg-linear-to-r from-[#ffffff] from-21% via-tpt-claro via-60% to-tpt-cor to-100% border-b border-tpt-cor
         dark:from-gray-900 dark:from-21% dark:via-tpt-escuro dark:via-65% dark:to-tpt-meio dark:to-100%">
 
 
@@ -91,8 +91,10 @@
                     </p>
                 </div>
 
-                <button id="alterarTema" type="button" class="rounded-full border w-10 h-6 dark:bg-tpt-meio bg-gray-300">
-                    <span class="block w-5 h-5 rounded-full bg-white transition-transform duration-300 translate-x-0"></span>
+                <button id="alterarTema" type="button"
+                    class="rounded-full border-2 border-gray-400 dark:border-gray-100 w-11 h-7 dark:bg-tpt-meio bg-gray-300">
+                    <span
+                        class="block w-5 h-5 rounded-full bg-white transition-transform duration-300 translate-x-0"></span>
                 </button>
 
             </div>
@@ -114,13 +116,66 @@
 
             </div>
 
+            <div class="mt-6">
+
+                <h3 class="font-semibold text-lg mb-3">
+                    Leitura
+                </h3>
+
+                <!-- Tamanho do texto -->
+                <div class="py-3">
+
+                    <div class="flex justify-between items-center mb-2">
+
+                        <label for="tamanhoTexto" class="font-medium">
+                            Tamanho do Texto
+                        </label>
+
+                        <output id="valorTamanhoTexto" class="text-sm">
+                            100%
+                        </output>
+
+                    </div>
+
+                    <input id="tamanhoTexto" type="range" min="80" max="150" step="10" value="100"
+                        class="w-full accent-tpt-cor">
+
+                </div>
+
+                <!-- Espaçamento do texto -->
+                <div class="py-3">
+
+                    <div class="flex justify-between items-center mb-2 gap-2">
+
+                        <label for="espacamentoLinhas" class="font-medium">
+                            Espaçamento das Linhas
+                        </label>
+
+                        <output id="valorEspacamentoLinhas" class="text-sm">
+                            1,5
+                        </output>
+
+                        <input id="espacamentoLinhas" type="range" min="1.2" max="2" step="0.1" value="1.5"
+                            class="w-full accent-tpt-cor">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button id="resetarPersonalizacao" type="button"
+                class="mt-5 w-full rounded-lg border border-gray-300 px-4 py-2 font-medium hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
+                Restaurar configurações padrão
+            </button>
+
         </div>
 
     </aside>
 
 
     <!-- + Inicio + -->
-    <section id=" inicio" class="max-w-360 mx-auto px-6 items-center gap-4 py-4.5">
+    <section id="inicio" class="max-w-360 mx-auto px-6 items-center gap-4 py-4.5">
 
         <!-- Parte da imagens e texto -->
         <div class="flex gap-10 py-4.5">
