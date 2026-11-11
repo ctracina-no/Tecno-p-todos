@@ -4,27 +4,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="dist/output.css">
+
     <title>Tecnologia para todos</title>
 </head>
 
-<body class="bg-gray-200 text-gray-900">
+<!-- Criação do modo Dark do site -->
 
-    <header class="bg-linear-to-r from-[#ffffff]_21% via-[#78d8f0]_78% to-[#00b6e7]_100% border-b ">
-        <div class="max-w-285 mx-auto px-6 flex items-center gap-4 py-4.5">
+<body class="bg-gray-100 text-gray-900  dark:bg-gray-900 dark:text-gray-100">
 
-            <div class="w-13.5 h-13.5 rounded-xl bg-blue-800 flex items-center justify-center text-white font-extrabold text-[1.05rem] tracking-wide shrink-0">
-                TPT
+    <!-- Divisão do gradiente do modo claro e escuro -->
+    <header class="bg-linear-to-r from-[#ffffff] from-21% via-tpt-claro via-60% to-tpt-cor to-100% border-b border-tpt-cor
+        dark:from-gray-900 dark:from-21% dark:via-tpt-escuro dark:via-65% dark:to-tpt-meio dark:to-100%">
+
+
+        <div class="max-w-285 mx-auto px-6 flex justify-between items-center gap-4 py-4.5">
+
+            <!-- Div 1 = para separar o icone e o titulo -->
+            <div class="flex items-center gap-4">
+
+                <a type="button" href="index.html"
+                    class="w-13.5 h-13.5 rounded-xl bg-tpt-cor flex items-center justify-center text-white font-extrabold text-[1.05rem] tracking-wide shrink-0">
+                    <img src="Img/globe-hemisphere-west-light.png" alt="LogodoSite">
+                </a>
+
+                <div>
+                    <h1 class="m-0 text-lg font-extrabold">
+                        Tecnologia para todos
+                    </h1>
+
+                    <p class="mt-0.5 mb-0 text-sm">
+                        Um site acessível para todos seus usuários
+                    </p>
+                </div>
             </div>
 
-            <div>
-                <h1 class="m-0 text-lg font-extrabold">Tecnologia para todos</h1>
-                <p class="mt-0.5 mb-0 text-sm">Um site acessivel para todos seus usuarios</p>
+            <!-- Div 2 = para separar o botão de modos e edição avançada -->
+            <div class="flex gap-4">
+                <button id="modos" type="button" aria-label="Ativar modo escuro" aria-pressed="false"
+                    class="rounded-full border border-white/50 p-2">
+                    <img id="icone-tema" src="Img/sun.png" alt="Modo claro" class="h-6 w-6">
+                </button>
+                <button id="opcoes" type="button" aria-label="opções avançada" aria-pressed="false"
+                    class="rounded-full border border-white/50 p-2">
+                    <img id="opcoes" src="Img/gear.png" alt="opcoes" class="h-6 w-6">
+                </button>
             </div>
 
         </div>
+
     </header>
 
+    <div id="fundoOpcoes" class="fixed inset-0 z-40 bg-black/50 opacity-0 invisible transition-opacity duration-300">
+    </div>
+
+    <aside id="painelOpcoes"
+        class="fixed top-0 right-0 z-50 h-dvh w-full max-w-sm translate-x-full bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 shadow-2xl transition-transform duration-300"
+        role="dialog" aria-modal="true" aria-labelledby="tituloOpcoes" aria-hidden="true">
+
+        <!-- cabeçario do painel -->
+        <div class="flex items-center justify-between p-5 border-b dark:border-gray-700">
+
+            <h2 id="tituloOpcoes" class="text-xl font-bold">
+                Personalizar site
+            </h2>
+
+            <button id="fecharOpcoes" type="button" aria-label="Fechar Personalização" class="text-2xl px-2">
+                &times;
+            </button>
+        </div>
+
+        <!-- conteudo das opcoes -->
+        <div class="p-5 overflow-y-auto h-[calc(100%-73px)]">
+
+            <h3 class="font-semibold text-lg mb-3">
+                Aparência
+            </h3>
+
+            <div class="flex items-center justify-between gap-4 py-3">
+
+                <div>
+                    <h4 class="font-medium">Modo escuro</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-300">
+                        Ativar ou desativar o tema escuro.
+                    </p>
+                </div>
+
+                <button id="alterarTema" type="button"
+                    class="rounded-full border-2 border-gray-400 dark:border-gray-100 w-11 h-7 dark:bg-tpt-meio bg-gray-300">
+                    <span
+                        class="block w-5 h-5 rounded-full bg-white transition-transform duration-300 translate-x-0"></span>
+                </button>
+
+            </div>
+
+            <div class="mt-6">
+
+                <h3 class="font-semibold text-lg mb-3">
+                    Cor Principal
+                </h3>
+
+                <!-- Roda de Cores -->
+                <button id="rodaCores" type="button"
+                    class="roda-cores w-40 h-40 rounded-full cursor-crosshair border-4 border-gray-300 p-0"
+                    aria-label="Escolher cor principal">
+                </button>
+
+                <p id="valorCor" class="text-sm mt-3">
+                    Cor Selecionada: Nenhuma
+                </p>
+
+            </div>
+
+            <div class="mt-6">
+
+                <h3 class="font-semibold text-lg mb-3">
+                    Leitura
+                </h3>
+
+                <!-- Tamanho do texto -->
+                <div class="py-3">
+
+                    <div class="flex justify-between items-center mb-2">
+
+                        <label for="tamanhoTexto" class="font-medium">
+                            Tamanho do Texto
+                        </label>
+
+                        <output id="valorTamanhoTexto" class="text-sm">
+                            100%
+                        </output>
+
+                    </div>
+
+                    <input id="tamanhoTexto" type="range" min="80" max="150" step="10" value="100"
+                        class="w-full accent-tpt-cor">
+
+                </div>
+
+                <!-- Espaçamento do texto -->
+                <div class="py-3">
+
+                    <div class="flex justify-between items-center mb-2 gap-2">
+
+                        <label for="espacamentoLinhas" class="font-medium">
+                            Espaçamento das Linhas
+                        </label>
+
+                        <output id="valorEspacamentoLinhas" class="text-sm">
+                            1.5
+                        </output>
+
+                        <input id="espacamentoLinhas" type="range" min="1.2" max="2" step="0.1" value="1.5"
+                            class="w-full accent-tpt-cor">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="mt-6">
+
+                <h3 class="font-semibold text-lg mb-3">
+                    Acessibilidade
+                </h3>
+
+                <div class="flex items-center justify-between gap-4 py-3">
+
+                    <div>
+                        <h4 class="font-medium">Alto contraste</h4>
+
+                        <p class="text-sm text-gray-500 dark:text-gray-300">
+                            Aumentar o contraste das cores para leitura.
+                        </p>
+                    </div>
+
+                    <button id="alternarContraste" type="button" aria-label="Ativar alto contraste" aria-pressed="false"
+                    class="rounded-full border-2 border-gray-400 dark:border-gray-100 w-11 h-7 dark:bg-tpt-meio bg-gray-300">
+                    <span
+                        class="block w-5 h-5 rounded-full bg-white transition-transform duration-300 translate-x-0"></span>
+                </button>
+
+                </div>
+
+                <button id="resetarPersonalizacao" type="button"
+                    class="mt-5 w-full rounded-lg border border-gray-300 px-4 py-2 font-medium hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">
+                    Restaurar configurações padrão
+                </button>
+
+            </div>
+
+    </aside>
+
+
+    <!-- + Inicio + -->
+    <section id="inicio" class="max-w-360 mx-auto px-6 items-center gap-4 py-4.5">
+
+        <!-- Parte da imagens e texto -->
+        <div class="flex gap-10 py-4.5">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTibE2A22h4VdFHvIGfXtNH9Kj5VYauu5Jx6MarOhXjyxbs3mlxe16c_jHA&s=10"
+                alt="computer photo" class="h-130 w-100">
+
+            <div>
+                <h1>Inicio</h1>
+
+                <br>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, earum! Odio nobis
+                    architecto
+                    nulla
+                    fuga cumque alias exercitationem distinctio, nihil modi eius labore ratione obcaecati velit
+                    perferendis.
+                    Aliquam, beatae, a dolore nemo ad perspiciatis, in sunt totam assumenda recusandae similique?
+                    Corrupti
+                    dolore cumque maxime nemo voluptates minus obcaecati, fuga inventore, sequi optio eos beatae
+                    tenetur
+                    eligendi numquam laudantium vel doloribus consequuntur! Totam dolor dicta quas necessitatibus
+                    facere
+                    voluptates rem? Eveniet consectetur voluptate, et facere, accusantium nulla beatae laboriosam,
+                    autem
+                    nemo fuga totam officiis hic. Fuga, accusantium enim minima veniam vitae voluptatibus
+                    consequatur
+                    ullam
+                    eligendi non quasi voluptates, accusamus, asperiores sequi?</p>
+
+                <div class="flex justify-between gap-5 py-15">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTibE2A22h4VdFHvIGfXtNH9Kj5VYauu5Jx6MarOhXjyxbs3mlxe16c_jHA&s=10"
+                        alt="computer photo" class="h-60 w-60 rounded-full">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTibE2A22h4VdFHvIGfXtNH9Kj5VYauu5Jx6MarOhXjyxbs3mlxe16c_jHA&s=10"
+                        alt="computer photo" class="h-60 w-60 rounded-full">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTibE2A22h4VdFHvIGfXtNH9Kj5VYauu5Jx6MarOhXjyxbs3mlxe16c_jHA&s=10"
+                        alt="computer photo" class="h-60 w-60 rounded-full">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- parte só com as imagens retângulares -->
+        <div class="flex gap-10 py-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTibE2A22h4VdFHvIGfXtNH9Kj5VYauu5Jx6MarOhXjyxbs3mlxe16c_jHA&s=10"
+                alt="computer photo" class="h-50 w-120">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTibE2A22h4VdFHvIGfXtNH9Kj5VYauu5Jx6MarOhXjyxbs3mlxe16c_jHA&s=10"
+                alt="computer photo" class="h-50 w-120">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTibE2A22h4VdFHvIGfXtNH9Kj5VYauu5Jx6MarOhXjyxbs3mlxe16c_jHA&s=10"
+                alt="computer photo" class="h-50 w-120">
+        </div>
+
+    </section>
+    <!-- Script da mudança dos modos e no salvamento da preferencia -->
+    <script src="JS/modos.js"></script>
+
+    <!-- Script da personalização do site -->
+    <script src="JS/opcaoAvan.js"></script>
 </body>
+
 
 </html>

@@ -1,1 +1,74 @@
-@import 'tailwindcss'
+@import "tailwindcss";
+
+@theme {
+/* A cor padrão do site é um azul */
+    --color-tpt-cor: #00b6e7;
+    --color-tpt-claro: #59DBFF;
+    --color-tpt-meio: #0084A8;
+    --color-tpt-escuro: #005C99;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.roda-cores {
+    background:
+        radial-gradient(circle, white 0%, transparent 75%),
+        conic-gradient(
+            red,
+            yellow,
+            lime,
+            cyan,
+            blue,
+            magenta,
+            red
+        );
+}
+
+#inicio {
+    font-size: calc(1rem * var(--escala-texto, 1));
+}
+
+/* Modo de alto contraste */
+
+html.alto-contraste body {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+html.alto-contraste header,
+html.alto-contraste #painelOpcoes,
+html.alto-contraste main,
+html.alto-contraste #inicio {
+    background: #000 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+}
+
+html.alto-contraste body :is(h1, h2, h3, h4, p, label, output, li, small, span) {
+    color: #fff !important;
+}
+
+html.alto-contraste body a {
+    color: #ffff00 !important;
+    text-decoration: underline;
+}
+
+html.alto-contraste body button {
+    background-color: #000 !important;
+    color: #ffff00 !important;
+    border-color: #ffff00 !important;
+}
+
+html.alto-contraste body input,
+html.alto-contraste body select,
+html.alto-contraste body textarea {
+    background-color: #000 !important;
+    color: #fff !important;
+    border-color: #ffff00 !important;
+    accent-color: #ffff00;
+}
+
+html.alto-contraste body :focus-visible {
+    outline: 3px solid #ffff00 !important;
+    outline-offset: 3px;
+}
