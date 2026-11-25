@@ -1,9 +1,4 @@
-TECNOLOGIA PARA TODOS — versão atualizada
-
-Como abrir
-1. Extraia a pasta do ZIP.
-2. Abra index.html no navegador ou use Live Server no VS Code.
-3. Não é necessário compilar Tailwind: esta versão usa CSS próprio e JavaScript puro.
+TECNOLOGIA PARA TODOS
 
 Arquivos
 - index.html: estrutura do site
@@ -23,6 +18,3 @@ Recursos
 
 Imagens
 A página utiliza imagens remotas de páginas institucionais (AT&T e UNICEF). É necessária conexão com a internet para carregá-las.
-
-Observação
-O conteúdo dos cartões foi resumido e organizado com base no PDF projeto-grupo04.pdf enviado pelo usuário; não substitui a leitura do documento original e suas referências.
