@@ -1,30 +1,195 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/output.css">
-    <title>Tecnologia para todos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Tecnologia para Todos: tecnologia, ciência e inclusão digital.">
+    <title>Tecnologia para Todos</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-gray-200 text-gray-900">
-
-    <header class="bg-linear-to-r from-[#ffffff]_21% via-[#78d8f0]_78% to-[#00b6e7]_100% border-b ">
-        <div class="max-w-285 mx-auto px-6 flex items-center gap-4 py-4.5">
-
-            <div class="w-13.5 h-13.5 rounded-xl bg-blue-800 flex items-center justify-center text-white font-extrabold text-[1.05rem] tracking-wide shrink-0">
-                TPT
-            </div>
-
-            <div>
-                <h1 class="m-0 text-lg font-extrabold">Tecnologia para todos</h1>
-                <p class="mt-0.5 mb-0 text-sm">Um site acessivel para todos seus usuarios</p>
-            </div>
-
+<body>
+    <a class="skip" href="#main" data-pt="Pular para o conteúdo" data-en="Skip to content">Pular para o conteúdo</a>
+    <header class="site-header">
+        <div class="wrap nav"><a class="brand" href="#top" aria-label="Tecnologia para Todos">
+            <span class="brand-mark">T+</span><span><strong data-pt="Tecnologia para Todos"
+                        data-en="Technology for Everyone">Tecnologia para Todos</strong><small
+                        data-pt="Ciência, acessibilidade e inclusão"
+                        data-en="Science, accessibility and inclusion">Ciência, acessibilidade e
+                        inclusão</small></span></a>
+            <nav aria-label="Navegação principal"><a href="#inclusao" data-pt="Inclusão"
+                    data-en="Inclusion">Inclusão</a><a href="#artigo" data-pt="Ciência e redes"
+                    data-en="Science & social media">Ciência e redes</a><a href="#quiz" data-pt="Quiz"
+                    data-en="Quiz">Quiz</a></nav>
+            <div class="tools"><button id="lang" class="tool" aria-label="Switch to English">EN</button><button
+                    id="theme" class="tool" aria-label="Alternar tema" title="Alternar tema">◐</button><button
+                    id="fontDown" class="tool" aria-label="Diminuir texto">A−</button><button id="fontUp" class="tool"
+                    aria-label="Aumentar texto">A+</button><button id="contrast" class="tool" aria-pressed="false"
+                    data-pt="Contraste" data-en="Contrast">Contraste</button><button id="menu" class="tool menu"
+                    aria-expanded="false" aria-label="Abrir menu">☰</button></div>
         </div>
     </header>
-
+    <main id="main">
+        <section id="top" class="hero">
+            <div class="wrap hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow" data-pt="UM FUTURO MAIS ACESSÍVEL" data-en="A MORE ACCESSIBLE FUTURE">UM FUTURO
+                        MAIS ACESSÍVEL</p>
+                    <h1 data-pt="A tecnologia deve <em>aproximar</em> pessoas."
+                        data-en="Technology should <em>bring people together</em>.">A tecnologia deve <em>aproximar</em>
+                        pessoas.</h1>
+                    <p class="lead"
+                        data-pt="Conheça como ciência, inovação e inclusão digital podem abrir caminhos para uma sociedade com mais oportunidades."
+                        data-en="Explore how science, innovation and digital inclusion can create more opportunities for everyone.">
+                        Conheça como ciência, inovação e inclusão digital podem abrir caminhos para uma sociedade com
+                        mais oportunidades.</p>
+                    <div class="hero-actions"><a class="btn primary" href="#inclusao" data-pt="Explorar inclusão"
+                            data-en="Explore inclusion">Explorar inclusão</a><a class="btn ghost" href="#artigo"
+                            data-pt="Ler sobre redes e ciência ↓" data-en="Read about social media & science ↓">Ler
+                            sobre redes e ciência ↓</a></div>
+                    <div class="hero-note"><span class="dot"></span><span
+                            data-pt="Informação clara. Recursos acessíveis. Conhecimento para todos."
+                            data-en="Clear information. Accessible tools. Knowledge for everyone.">Informação clara.
+                            Recursos acessíveis. Conhecimento para todos.</span></div>
+                </div>
+                <div class="hero-visual"><img
+                        src="https://about.att.com/ecms/dam/snr/2023/april/featured/digital-navigators_FEATURED_STORY_768x575.png"
+                        alt="Duas pessoas colaboram em um computador em uma biblioteca">
+                    <div class="floating-card"><span class="float-icon">✦</span>
+                        <div><strong data-pt="Acesso é oportunidade" data-en="Access means opportunity">Acesso é
+                                oportunidade</strong><small data-pt="Tecnologia feita para incluir"
+                                data-en="Technology designed to include">Tecnologia feita para incluir</small></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="intro-strip">
+            <div class="wrap strip-grid">
+                <div><span class="strip-number">01</span><strong data-pt="Tecnologia assistiva"
+                        data-en="Assistive technology">Tecnologia assistiva</strong>
+                    <p data-pt="Ferramentas que ampliam autonomia." data-en="Tools that support independence.">
+                        Ferramentas que ampliam autonomia.</p>
+                </div>
+                <div><span class="strip-number">02</span><strong data-pt="Acessibilidade digital"
+                        data-en="Digital accessibility">Acessibilidade digital</strong>
+                    <p data-pt="Experiências que acolhem diferentes usuários."
+                        data-en="Experiences that welcome different users.">Experiências que acolhem diferentes
+                        usuários.</p>
+                </div>
+                <div><span class="strip-number">03</span><strong data-pt="Conhecimento confiável"
+                        data-en="Reliable knowledge">Conhecimento confiável</strong>
+                    <p data-pt="Ciência e pensamento crítico no cotidiano."
+                        data-en="Science and critical thinking in everyday life.">Ciência e pensamento crítico no
+                        cotidiano.</p>
+                </div>
+            </div>
+        </section>
+        <section id="inclusao" class="section">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow" data-pt="TECNOLOGIA E SOCIEDADE" data-en="TECHNOLOGY & SOCIETY">TECNOLOGIA E
+                            SOCIEDADE</p>
+                        <h2 data-pt="Inclusão começa no <em>acesso</em>."
+                            data-en="Inclusion begins with <em>access</em>.">Inclusão começa no <em>acesso</em>.</h2>
+                    </div>
+                    <p data-pt="Explore temas que mostram como a tecnologia pode reduzir barreiras e ampliar participação."
+                        data-en="Explore topics showing how technology can reduce barriers and expand participation.">
+                        Explore temas que mostram como a tecnologia pode reduzir barreiras e ampliar participação.</p>
+                </div>
+                <div id="inclusionGrid" class="topic-grid"></div>
+            </div>
+        </section>
+        <section id="artigo" class="section article-section">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow" data-pt="LEITURA EM DESTAQUE" data-en="FEATURED READING">LEITURA EM DESTAQUE
+                        </p>
+                        <h2 data-pt="Redes sociais, IA e o <em>conhecimento científico</em>."
+                            data-en="Social media, AI and <em>scientific knowledge</em>.">Redes sociais, IA e o
+                            <em>conhecimento científico</em>.
+                        </h2>
+                    </div>
+                    <p data-pt="O conteúdo do projeto foi dividido em leituras curtas. Escolha um tema para abrir o texto."
+                        data-en="The project content is organized into short readings. Choose a topic to open its text.">
+                        O conteúdo do projeto foi dividido em leituras curtas. Escolha um tema para abrir o texto.</p>
+                </div>
+                <div class="article-intro"><img
+                        src="https://www.unicef.org/elsalvador/sites/unicef.org.elsalvador/files/styles/media_large_image/public/_D6A2515_1.jpg.webp?itok=_FmQTgtu"
+                        alt="Estudante utilizando tecnologia assistiva para acessar conteúdo digital">
+                    <div><span class="tag" data-pt="25 temas" data-en="25 topics">25 temas</span>
+                        <h3 data-pt="Uma visão crítica, sem simplificar demais"
+                            data-en="A critical view without oversimplifying">Uma visão crítica, sem simplificar demais
+                        </h3>
+                        <p data-pt="O texto não afirma que a tecnologia é apenas boa ou ruim. Ele analisa como comportamento humano, algoritmos, interesses econômicos, IA, cultura e política se relacionam."
+                            data-en="The text does not claim technology is simply good or bad. It examines how human behavior, algorithms, economic interests, AI, culture and politics interact.">
+                            O texto não afirma que a tecnologia é apenas boa ou ruim. Ele analisa como comportamento
+                            humano, algoritmos, interesses econômicos, IA, cultura e política se relacionam.</p>
+                    </div>
+                </div>
+                <div id="articleGrid" class="article-grid"></div>
+                <p class="source-note"
+                    data-pt="Conteúdo resumido e organizado a partir do PDF projeto-grupo04.pdf enviado nesta conversa. Consulte o documento original para o texto completo e referências."
+                    data-en="Content summarized and organized from the PDF projeto-grupo04.pdf provided in this chat. Consult the original document for the full text and references.">
+                    Conteúdo resumido e organizado a partir do PDF projeto-grupo04.pdf enviado nesta conversa. Consulte
+                    o documento original para o texto completo e referências.</p>
+            </div>
+        </section>
+        <section id="quiz" class="section quiz-section">
+            <div class="wrap quiz-card">
+                <div>
+                    <p class="eyebrow" data-pt="APRENDA E TESTE" data-en="LEARN & TEST">APRENDA E TESTE</p>
+                    <h2 data-pt="Informação viral é sempre verdadeira?" data-en="Is viral information always true?">
+                        Informação viral é sempre verdadeira?</h2>
+                    <p data-pt="Faça uma pergunta rápida sobre pensamento crítico."
+                        data-en="Try a quick question about critical thinking.">Faça uma pergunta rápida sobre
+                        pensamento crítico.</p>
+                </div>
+                <div class="quiz-area">
+                    <p id="quizQuestion" data-pt="Muitas curtidas comprovam que uma informação é verdadeira?"
+                        data-en="Do many likes prove information is true?">Muitas curtidas comprovam que uma informação
+                        é verdadeira?</p>
+                    <div class="quiz-options"><button data-answer="no" data-pt="Não. Popularidade não é evidência."
+                            data-en="No. Popularity is not evidence.">Não. Popularidade não é evidência.</button><button
+                            data-answer="yes" data-pt="Sim. Quanto mais curtidas, mais confiável."
+                            data-en="Yes. More likes mean more reliable.">Sim. Quanto mais curtidas, mais
+                            confiável.</button></div>
+                    <p id="quizFeedback" class="quiz-feedback" aria-live="polite"></p>
+                </div>
+            </div>
+        </section>
+        <section class="closing">
+            <div class="wrap closing-inner">
+                <div>
+                    <p class="eyebrow" data-pt="CONHECIMENTO PARA TODOS" data-en="KNOWLEDGE FOR EVERYONE">CONHECIMENTO
+                        PARA TODOS</p>
+                    <h2 data-pt="Uma internet mais inclusiva começa com escolhas melhores."
+                        data-en="A more inclusive internet starts with better choices.">Uma internet mais inclusiva
+                        começa com escolhas melhores.</h2>
+                </div><a class="btn light" href="#top" data-pt="Voltar ao início ↑" data-en="Back to top ↑">Voltar ao
+                    início ↑</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="wrap footer-row"><span>© <span id="year"></span> Tecnologia para Todos</span><span
+                data-pt="Projeto educativo · Tecnologia, ciência e inclusão"
+                data-en="Educational project · Technology, science and inclusion">Projeto educativo · Tecnologia,
+                ciência e inclusão</span></div>
+    </footer>
+    <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop" data-close></div>
+        <article class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button
+                class="modal-close" data-close aria-label="Fechar">×</button><span id="modalTag"
+                class="tag">Leitura</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalText"></p><button class="btn primary" data-close data-pt="Fechar leitura"
+                data-en="Close reading">Fechar leitura</button>
+        </article>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
