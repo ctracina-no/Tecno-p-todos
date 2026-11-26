@@ -1,0 +1,204 @@
+{
+    "articles": [
+        {
+            "pt_title": "A transformação das redes sociais",
+            "pt_text": "As redes democratizaram parte da comunicação: qualquer pessoa pode publicar e alcançar grandes públicos. Mas uma opinião sem evidências pode aparecer ao lado de uma informação especializada. Curtidas e visualizações indicam alcance, não necessariamente qualidade ou verdade.",
+            "en_title": "How social media changed communication",
+            "en_text": "Social networks have made communication more open: anyone can publish and reach large audiences. But opinions without evidence can appear beside expert information. Likes and views measure reach, not necessarily quality or truth."
+        },
+        {
+            "pt_title": "A economia da atenção",
+            "pt_text": "A atenção tem valor econômico. Plataformas usam recomendações, notificações, rolagem infinita e reprodução automática para manter usuários interessados. Conteúdos emocionais podem prender a atenção, embora não sejam necessariamente os mais confiáveis ou profundos.",
+            "en_title": "The attention economy",
+            "en_text": "Attention has economic value. Platforms use recommendations, notifications, infinite scrolling and autoplay to keep users engaged. Emotional content can attract attention without being the most reliable or thoughtful."
+        },
+        {
+            "pt_title": "Redes sociais e adolescentes",
+            "pt_text": "As redes podem oferecer amizade, apoio, criatividade e aprendizado. Os efeitos variam conforme idade, contexto, conteúdo, vulnerabilidades e forma de uso. O PDF destaca que ainda não há evidências suficientes para afirmar que redes sociais sejam seguramente adequadas a todos os jovens.",
+            "en_title": "Social media and teenagers",
+            "en_text": "Social networks can offer friendship, support, creativity and learning. Effects vary with age, context, content, individual vulnerabilities and patterns of use. The source notes that evidence is not yet sufficient to conclude social media is safe for every young person."
+        },
+        {
+            "pt_title": "Uso problemático",
+            "pt_text": "Uso problemático não é apenas passar muitas horas online: envolve dificuldade de controlar o uso e consequências negativas. O texto cita pesquisa internacional de 2022 que encontrou sinais em cerca de 11% dos adolescentes estudados, ante 7% em 2018, e ressalta que associação não prova causalidade.",
+            "en_title": "Problematic use",
+            "en_text": "Problematic use is not simply spending many hours online: it involves difficulty controlling use and negative consequences. The source cites a 2022 international study finding signs in about 11% of adolescents studied, up from 7% in 2018, and stresses that association does not prove causation."
+        },
+        {
+            "pt_title": "Comparação social",
+            "pt_text": "Publicações costumam mostrar momentos escolhidos: conquistas, viagens e momentos felizes. Comparar a vida inteira com os melhores recortes de muitas pessoas é uma comparação desigual. Curtidas e seguidores também podem tornar a aprovação social mais quantificável.",
+            "en_title": "Social comparison",
+            "en_text": "Posts often show selected moments—achievements, trips and happy occasions. Comparing one's whole life with the highlights of many others is unequal. Likes and follower counts can also make social approval feel measurable."
+        },
+        {
+            "pt_title": "Algoritmos e personalização",
+            "pt_text": "Algoritmos selecionam o que aparece no feed com base em sinais de interesse. Isso ajuda a encontrar conteúdos relevantes, mas pode repetir perspectivas parecidas. Bolhas informacionais não dependem apenas dos algoritmos: escolhas dos usuários também influenciam o que veem.",
+            "en_title": "Algorithms and personalization",
+            "en_text": "Algorithms select feed content using signals of interest. This can help people find relevant material, but may repeatedly show similar perspectives. Information bubbles are shaped not only by algorithms but also by users' choices."
+        },
+        {
+            "pt_title": "Visibilidade não é maioria",
+            "pt_text": "Uma pequena parcela muito ativa pode publicar com frequência e receber grande atenção. Quem observa apenas a rede pode imaginar que essas opiniões representam toda a sociedade. O conteúdo mais visível nem sempre é o mais comum.",
+            "en_title": "Visibility is not the majority",
+            "en_text": "A small, highly active group can post often and receive substantial attention. Someone observing only social media may think those views represent everyone. The most visible content is not always the most common."
+        },
+        {
+            "pt_title": "Polarização política",
+            "pt_text": "Conflitos políticos existiam antes das redes. As plataformas podem mudar sua velocidade e visibilidade, mas posições políticas também dependem de fatores históricos, econômicos, familiares, culturais e sociais. Explicações simples sobre algoritmos não dão conta de toda a complexidade.",
+            "en_title": "Political polarization",
+            "en_text": "Political conflict predates social media. Platforms can change its speed and visibility, but political views are also shaped by historical, economic, family, cultural and social factors. Simple algorithm-only explanations miss this complexity."
+        },
+        {
+            "pt_title": "Desinformação e escala",
+            "pt_text": "Rumores e propaganda são antigos; a mudança está na escala e na facilidade de compartilhar. O PDF também alerta que a exposição não é igual para todos: conteúdos falsos e problemáticos podem se concentrar em certos grupos.",
+            "en_title": "Misinformation at scale",
+            "en_text": "Rumors and propaganda are old; what has changed is the scale and ease of sharing. The source also cautions that exposure is uneven: false and problematic content may be concentrated among particular groups."
+        },
+        {
+            "pt_title": "IA generativa",
+            "pt_text": "A IA pode criar textos, imagens, áudios e vídeos rapidamente, com usos positivos em educação, ciência, acessibilidade e saúde. Quando usada para enganar, pode facilitar a produção de muitas versões de uma mensagem e adaptá-las a diferentes públicos.",
+            "en_title": "Generative AI",
+            "en_text": "AI can quickly create text, images, audio and video, with positive uses in education, science, accessibility and health. When used deceptively, it can make it easier to produce many versions of a message and adapt them to different audiences."
+        },
+        {
+            "pt_title": "Deepfakes e autenticidade",
+            "pt_text": "Imagens, vídeos e áudios podem ser gerados ou alterados para representar algo que não aconteceu. Além de levar alguém a acreditar em uma falsidade, isso pode fazer com que conteúdos verdadeiros sejam injustamente chamados de artificiais. Procedência e contexto tornam-se essenciais.",
+            "en_title": "Deepfakes and authenticity",
+            "en_text": "Images, videos and audio can be generated or altered to depict events that never happened. Besides making people believe falsehoods, this can lead true material to be wrongly dismissed as artificial. Provenance and context become essential."
+        },
+        {
+            "pt_title": "IA e persuasão",
+            "pt_text": "Sistemas de linguagem podem adaptar argumentos a informações sobre uma pessoa. O estudo citado no PDF indica capacidade persuasiva em condições experimentais específicas, não controle das pessoas. Personalização pode apoiar educação, mas também pode ser usada para manipulação.",
+            "en_title": "AI and persuasion",
+            "en_text": "Language systems can adapt arguments to information about a person. The study cited in the source shows persuasive ability under specific experimental conditions—not control over people. Personalization can support education but can also be used to manipulate."
+        },
+        {
+            "pt_title": "Quatro fatores da IA",
+            "pt_text": "O texto destaca velocidade, escala, realismo e personalização. A IA não inventou mentira ou propaganda; pode torná-las mais rápidas, baratas, convincentes e fáceis de produzir em grande quantidade.",
+            "en_title": "Four AI factors",
+            "en_text": "The source highlights speed, scale, realism and personalization. AI did not invent lies or propaganda; it can make them faster, cheaper, more convincing and easier to produce at scale."
+        },
+        {
+            "pt_title": "Por que a ciência parece menos viral",
+            "pt_text": "A ciência envolve observação, hipóteses, análise, revisão, reprodução e discussão. Pesquisadores precisam comunicar limites e incertezas. Respostas absolutas e simples podem parecer mais convincentes nas redes, mesmo quando não têm evidências sólidas.",
+            "en_title": "Why science may seem less viral",
+            "en_text": "Science involves observation, hypotheses, analysis, review, replication and discussion. Researchers must communicate limits and uncertainty. Simple, absolute claims can seem more convincing online even when they lack strong evidence."
+        },
+        {
+            "pt_title": "Opinião e evidência",
+            "pt_text": "Experiências pessoais podem ser verdadeiras e importantes, mas não demonstram sozinhas que algo causou determinado resultado nem representam toda a população. Pesquisas sistemáticas com comparação e controle de variáveis ajudam a avaliar essas perguntas.",
+            "en_title": "Opinion and evidence",
+            "en_text": "Personal experiences can be real and important, but alone they cannot prove causation or represent an entire population. Systematic research with comparisons and control of variables helps evaluate such questions."
+        },
+        {
+            "pt_title": "Por que as ciências sociais importam",
+            "pt_text": "Para entender por que uma informação viraliza, diferentes áreas contribuem: computação estuda sistemas, psicologia analisa comportamentos, sociologia observa grupos, economia investiga incentivos, comunicação examina mensagens e ciência política estuda poder e instituições.",
+            "en_title": "Why social sciences matter",
+            "en_text": "To understand why information goes viral, different fields contribute: computing studies systems, psychology examines behavior, sociology looks at groups, economics studies incentives, communication analyzes messages and political science studies power and institutions."
+        },
+        {
+            "pt_title": "A importância da sociologia",
+            "pt_text": "Comportamentos individuais acontecem dentro de estruturas sociais. Classe, educação, família, cultura, desigualdade, instituições, comunidades, mídia e relações de poder ajudam a compreender padrões coletivos. Comunidades digitais também constroem identidade e pertencimento.",
+            "en_title": "The importance of sociology",
+            "en_text": "Individual behavior occurs within social structures. Class, education, family, culture, inequality, institutions, communities, media and power relations help explain collective patterns. Digital communities also shape identity and belonging."
+        },
+        {
+            "pt_title": "A importância da ciência política",
+            "pt_text": "A ciência política estuda poder, instituições, governos, opinião pública, políticas e participação. Quando temas complexos são reduzidos a slogans, custos, consequências e diferenças entre grupos podem desaparecer do debate.",
+            "en_title": "The importance of political science",
+            "en_text": "Political science studies power, institutions, governments, public opinion, policy and participation. When complex issues are reduced to slogans, costs, consequences and differences between groups can disappear from debate."
+        },
+        {
+            "pt_title": "Ciência, política e democracia",
+            "pt_text": "A ciência pode ajudar a responder perguntas factuais sobre políticas públicas, custos e resultados. Ela não determina valores ou em quem votar. Ciência e democracia têm funções diferentes e complementares: produzir conhecimento e decidir coletivamente o que fazer com ele.",
+            "en_title": "Science, politics and democracy",
+            "en_text": "Science can help answer factual questions about public policy, costs and outcomes. It does not determine values or whom to vote for. Science and democracy have different but complementary roles: producing knowledge and collectively deciding what to do with it."
+        },
+        {
+            "pt_title": "O conhecimento científico está sendo ignorado?",
+            "pt_text": "O PDF recomenda cuidado com essa afirmação. Dados citados mostram que muitas pessoas buscam ciência em plataformas digitais e, ao mesmo tempo, encontram informações que parecem falsas. As redes são tanto canais de divulgação quanto ambientes de disputa por credibilidade.",
+            "en_title": "Is scientific knowledge being ignored?",
+            "en_text": "The source advises caution with this claim. Data cited show that many people seek science on digital platforms while also encountering information they believe is false. Social networks are both channels for science communication and spaces where credibility is contested."
+        },
+        {
+            "pt_title": "Identidade e crenças",
+            "pt_text": "Crenças se relacionam a família, cultura, experiências, valores e grupos. Quando uma informação contradiz a identidade de alguém, aceitá-la pode ser difícil. A pergunta sobre verdade pode ser substituída pela pergunta sobre o que o grupo acredita.",
+            "en_title": "Identity and beliefs",
+            "en_text": "Beliefs are connected to family, culture, experience, values and groups. When information conflicts with someone's identity, accepting it can be difficult. The question of truth may be replaced by what one's group believes."
+        },
+        {
+            "pt_title": "Pensamento crítico",
+            "pt_text": "Pensar criticamente não é desconfiar de tudo nem acreditar automaticamente em autoridades. É avaliar evidências: quem publicou, quais fontes existem, se outros estudos confirmam, se há consenso, se correlação foi confundida com causa e se imagens têm origem verificável.",
+            "en_title": "Critical thinking",
+            "en_text": "Critical thinking is neither distrust of everything nor automatic belief in authorities. It means evaluating evidence: who published it, which sources exist, whether other studies confirm it, whether correlation is confused with cause and whether images have verifiable origins."
+        },
+        {
+            "pt_title": "A ciência também pode errar",
+            "pt_text": "Pesquisadores podem cometer erros, estudos podem não ser reproduzidos e novas evidências podem mudar conclusões. A revisão é uma característica do método científico. Ceticismo científico pergunta quais evidências sustentam uma conclusão; rejeição automática decide não aceitar evidências.",
+            "en_title": "Science can also be wrong",
+            "en_text": "Researchers can make mistakes, studies may not replicate and new evidence can change conclusions. Revision is part of the scientific method. Scientific skepticism asks what evidence supports a claim; automatic rejection refuses evidence in advance."
+        },
+        {
+            "pt_title": "O ciclo do problema",
+            "pt_text": "A disputa por atenção favorece certos conteúdos; recomendações personalizam o que vemos; opiniões muito visíveis podem parecer maioria; e a IA amplia a produção de mensagens. Isso torna mais difícil verificar autenticidade e encontrar informação confiável.",
+            "en_title": "The cycle of the problem",
+            "en_text": "Competition for attention favors some content; recommendations personalize what we see; highly visible opinions may seem like the majority; and AI increases message production. This makes authenticity harder to verify and reliable information harder to find."
+        },
+        {
+            "pt_title": "Possíveis soluções",
+            "pt_text": "Não há solução única. O PDF destaca educação midiática e científica, verificação de fontes, reconhecimento de manipulações, compreensão de conteúdos artificiais, transparência das plataformas, acesso a dados para pesquisadores e evolução da comunicação científica.",
+            "en_title": "Possible solutions",
+            "en_text": "There is no single solution. The source highlights media and science education, source checking, recognizing manipulation and artificial content, platform transparency, researcher access to data and improved science communication."
+        }
+    ],
+    "sections": [
+        {
+            "pt_title": "Tecnologia assistiva",
+            "pt_text": "Recursos como leitores de tela, legendas, teclados adaptados e reconhecimento de voz podem ampliar autonomia e participação.",
+            "en_title": "Assistive technology",
+            "en_text": "Tools such as screen readers, captions, adapted keyboards and voice recognition can expand independence and participation."
+        },
+        {
+            "pt_title": "Acessibilidade digital",
+            "pt_text": "Um site acessível oferece navegação por teclado, contraste adequado, texto alternativo, estrutura clara e conteúdo compreensível.",
+            "en_title": "Digital accessibility",
+            "en_text": "An accessible site supports keyboard navigation, suitable contrast, alt text, clear structure and understandable content."
+        },
+        {
+            "pt_title": "Mulheres na tecnologia",
+            "pt_text": "Representatividade e oportunidades justas ajudam a ampliar quem participa da criação e das decisões tecnológicas.",
+            "en_title": "Women in technology",
+            "en_text": "Representation and fair opportunities broaden who participates in creating and making decisions about technology."
+        },
+        {
+            "pt_title": "Inclusão racial",
+            "pt_text": "Tecnologia inclusiva considera desigualdades de acesso, representação e oportunidades, sem reproduzir discriminações.",
+            "en_title": "Racial inclusion",
+            "en_text": "Inclusive technology considers inequalities in access, representation and opportunity without reproducing discrimination."
+        },
+        {
+            "pt_title": "Inclusão social",
+            "pt_text": "A inclusão digital depende de conexão, dispositivos, acessibilidade, habilidades e apoio, não apenas de estar online.",
+            "en_title": "Social inclusion",
+            "en_text": "Digital inclusion depends on connectivity, devices, accessibility, skills and support—not merely being online."
+        },
+        {
+            "pt_title": "Educação e tecnologia",
+            "pt_text": "Recursos digitais podem apoiar aprendizagem quando são acessíveis, confiáveis e adequados às necessidades dos estudantes.",
+            "en_title": "Education and technology",
+            "en_text": "Digital resources can support learning when they are accessible, reliable and suited to students’ needs."
+        },
+        {
+            "pt_title": "IA para o bem comum",
+            "pt_text": "A IA pode apoiar educação, ciência, saúde e acessibilidade, desde que usada com responsabilidade e atenção a vieses.",
+            "en_title": "AI for the common good",
+            "en_text": "AI can support education, science, health and accessibility when used responsibly and with attention to bias."
+        },
+        {
+            "pt_title": "Inclusão digital",
+            "pt_text": "Acesso significativo combina internet, equipamento adequado, habilidades digitais e possibilidade de participação.",
+            "en_title": "Digital inclusion",
+            "en_text": "Meaningful access combines internet, suitable equipment, digital skills and the ability to participate."
+        }
+    ]
+}
